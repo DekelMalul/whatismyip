@@ -1,0 +1,19 @@
+{{- if .Values.ingress.enabled }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ include "whatismyip.fullname" . }}
+spec:
+  ingressClassName: "nginx"
+  rules: 
+  {{- if .Values.ingress.host }}
+  - host: {{ .Values.ingress.host }}  
+    http:
+   {{- else }}
+  - http:
+   {{- end }}  
+      paths:
+      - backend:
+          serviceName: {{ include "whatismyip.fullname" . }}
+          servicePort: {{ .Values.service.port }}
+{{- end }}
