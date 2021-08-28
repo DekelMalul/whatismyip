@@ -34,6 +34,7 @@ eksctl create cluster -f cluster.yaml
 
 
 ```console
+git clone git@github.com:DekelMalul/whatismyip.git
 cd helm
 helm install whatismyip . -f values.yaml
 ```
