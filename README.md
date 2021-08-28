@@ -12,7 +12,7 @@ The source code are provided with Dockerfile for building the image and use priv
 
 ## Helm chart
 
-The helm directory deploy the whatismyip deployment and ingress controller (as dependency).
+The helm directory deploy the whatismyip helm chart and ingress controller helm chart (as dependency).
 
 * https://kubernetes.github.io/ingress-nginx/deploy/#using-helm
 
