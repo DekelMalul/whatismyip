@@ -46,11 +46,11 @@ loadbalancer_ip=$(ping $lb_dns | head -n 1 | cut -d "(" -f2 | cut -d ")" -f1)
 echo $loadbalancer_ip
 ```
 
-Map the ingress.hosts field (`sisence.dekel.com`) to the loadbalancer ip withing local hosts file or any route 53 solution.
+Map the `ingress.hosts` field (`sisence.dekel.com`) to the loadbalancer ip withing local hosts file or any route 53 solution.
 
 ## Post installtion
 
-Access the website at ingress.hosts field (`sisence.dekel.com`)
+Access the website at `ingress.hosts` field (`sisence.dekel.com`)
 
 # Parameters
 
