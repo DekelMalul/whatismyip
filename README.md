@@ -24,7 +24,7 @@ The helm directory deploy the whatismyip helm chart and ingress controller helm 
 
 * EKS cluster.
 
-Sample eks cluster to be deployed
+Sample eks cluster can be deployed with the following:
 
 ```console
 eksctl create cluster -f cluster.yaml
@@ -46,7 +46,7 @@ loadbalancer_ip=$(ping $lb_dns | head -n 1 | cut -d "(" -f2 | cut -d ")" -f1)
 echo $loadbalancer_ip
 ```
 
-Map the hosts field to our local hosts file or route 53
+Map the ingress.hosts field to the loadbalancer ip withing local hosts file or any route 53 solution.
 
 # Parameters
 
