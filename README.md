@@ -46,7 +46,7 @@ loadbalancer_ip=$(ping $lb_dns | head -n 1 | cut -d "(" -f2 | cut -d ")" -f1)
 echo $loadbalancer_ip
 ```
 
-Map the ingress.hosts field to the loadbalancer ip withing local hosts file or any route 53 solution.
+Map the ingress.hosts field (`sisence.dekel.com`) to the loadbalancer ip withing local hosts file or any route 53 solution.
 
 # Parameters
 
